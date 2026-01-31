@@ -15,7 +15,49 @@
         <button id="generate">generate</button>
         <button id="clear">clear</button>
     </article>
-    <div class="ouput">Random message</div>
+    <div class="output">Random message</div>
     <footer>Webopage created by <a href="https://github.com/zondiMaqina/random_messages.git">Zondi Maqina</a></footer>
+
+    <script>
+        const greetingMessages = [
+            "Sawubona",                 // isiZulu – Hello
+            "Molo",                     // isiXhosa – Hello
+            "Dumela",                   // Setswana / Sepedi – Hello
+            "Hallo",                    // Afrikaans – Hello
+            "Thobela",                  // Sepedi – Greetings
+            "Avuxeni",                  // Xitsonga – Good morning
+            "Ndaa",                     // Tshivenda – Hello
+            "Lotjhani",                 // isiNdebele – Hello
+            "Goeie dag",                // Afrikaans – Good day
+            "Unjani?",                  // isiZulu – How are you?
+            "Kunjani?",                 // isiXhosa – How are you?
+            "Dumela rra",               // Setswana – Hello sir
+            "Dumela mma",               // Setswana – Hello ma’am
+            "Sala kahle",               // isiZulu – Goodbye (stay well)
+            "Hamba kahle",              // isiZulu – Goodbye (go well)
+            "Tsamaya sentle",           // Setswana – Go well
+            "Vho vuwa hani?",            // Tshivenda – How did you wake up?
+            "Avuxeni kahle",            // Xitsonga – Good morning (polite)
+            "Goeie more",               // Afrikaans – Good morning
+            "Sharp sharp!"              // South African slang – Hi / All good
+        ]   
+
+        function generateGreeting() {
+            let randomIndex = Math.floor(Math.random() * greetingMessages.length);
+            return greetingMessages[randomIndex];
+        }
+
+        let generateButton = document.querySelector('#generate');
+        let clearButton = document.querySelector('#clear');
+        let display = document.querySelector('.output');
+
+        generateButton.addEventListener("click", () => {
+            display.textContent = generateGreeting();
+        })
+
+        clearButton.addEventListener("click", () => {
+            display.textContent = 'Random message';
+        })
+    </script>
 </body>
 </html>
