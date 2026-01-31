@@ -11,3 +11,6 @@ Webpage for displaying different random messages
 
 1. finding methodon how to add css file to html file
 - you use the `<link>` tag within `<head></head>` element with `href` attribute
+
+2. Making text bold sith css
+- you use the `font-weight` property
